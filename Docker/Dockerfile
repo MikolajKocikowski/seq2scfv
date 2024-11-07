@@ -63,6 +63,10 @@ RUN chmod +x /usr/local/bin/*
 RUN mkdir /home/R
 ENV R_LIBS_USER="/home/R"
 
+# install necessary R modules
+RUN chmod +x /usr/bin/install2.r
+RUN Rscript -e "install.packages('https://cran.r-project.org/src/contrib/Archive/gtable/gtable_0.3.0.tar.gz', repos = NULL, type = 'source')"
+
 RUN /usr/bin/install2.r --libloc /home/R --error --repos "https://stat.ethz.ch/CRAN/" \
 data.table \
     reshape2 \ 
