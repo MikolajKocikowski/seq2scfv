@@ -110,9 +110,9 @@ files=("${input_dir}/CD160_P0_CCS.filtered.adapt.sizetrim.fasta" \
        "${input_dir}/CD160_P2_CCS.filtered.adapt.sizetrim.fasta" \
        "${input_dir}/CD160_P3_CCS.filtered.adapt.sizetrim.fasta") 
 
-for fastq in "${files[@]}"; do
-  basename=$(basename "$fastq" .filtered.adapt.sizetrim.fasta)
-  uniq_id.py $basename $fastq
+for fasta in "${files[@]}"; do
+  basename=$(basename "$fasta" .filtered.adapt.sizetrim.fasta)
+  uniq_id.py $basename $fasta
 done
 
 cat *correspondence.tsv > merged.nt_correspondence.tsv
