@@ -1,4 +1,14 @@
-# Seq2scFv
+# Seq2scFv - unofficial update
+
+Seq2scFv is a powerful tool for scFv analysis. No pre-built Docker image is publicly available, and the original Dockerfile no longer builds successfully due to pinned tool versions, evolving R packages, and other dependencies.
+
+This repository provides a rebuilt and tested Dockerfile that resolves these issues and incorporates other updates, making the pipeline runnable on modern systems. This ensures the tool can be maintained, extended, and reliably used for current research.
+
+While this setup generally reproduces the functionality of the original pipeline, it is **not identical** to the authors’ environment.
+
+This repository is not affiliated with the original authors or seq2scFv. A related issue and pull request were submitted upstream, but given that the official repo is tied to a published paper, updates there may not be feasible. This repository will maintain any further fixes or improvements. Please be mindful that the original software is provided under a non-commercial license; this repository does not change those terms.
+
+# User Guide
 
 ## Table of Contents
 
